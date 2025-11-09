@@ -1,0 +1,90 @@
+<FinalCalcLayout>:
+    orientation: "vertical"
+    spacing: 10
+    padding: 10
+
+    TextInput:
+        id: display
+        font_size: 40
+        multiline: False
+        halign: "right"
+        size_hint_y: 0.2
+
+    GridLayout:
+        cols: 4
+        spacing: 5
+        size_hint_y: 0.6
+
+        Button:
+            text: "7"
+            on_press: display.text += self.text
+        Button:
+            text: "8"
+            on_press: display.text += self.text
+        Button:
+            text: "9"
+            on_press: display.text += self.text
+        Button:
+            text: "/"
+            on_press: display.text += self.text
+
+        Button:
+            text: "4"
+            on_press: display.text += self.text
+        Button:
+            text: "5"
+            on_press: display.text += self.text
+        Button:
+            text: "6"
+            on_press: display.text += self.text
+        Button:
+            text: "*"
+            on_press: display.text += self.text
+
+        Button:
+            text: "1"
+            on_press: display.text += self.text
+        Button:
+            text: "2"
+            on_press: display.text += self.text
+        Button:
+            text: "3"
+            on_press: display.text += self.text
+        Button:
+            text: "-"
+            on_press: display.text += self.text
+
+        Button:
+            text: "0"
+            on_press: display.text += self.text
+        Button:
+            text: "."
+            on_press: display.text += self.text
+        Button:
+            text: "+"
+            on_press: display.text += self.text
+        Button:
+            text: "="
+            on_press: root.calculate()
+
+    GridLayout:
+        cols: 5
+        spacing: 5
+        size_hint_y: 0.2
+
+        Button:
+            text: "Сброс"
+            on_press: root.clear_display()
+        Button:
+            text: "x²"
+            on_press: root.power()
+        Button:
+            text: "√"
+            on_press: root.sqrt()
+        Button:
+            text: "%"
+            on_press: root.percent()
+        Button:
+            text: "История"
+            on_press: root.show_history()
+
